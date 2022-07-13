@@ -1,0 +1,38 @@
+{% extends "homepage.html" %}
+
+{% block main %}
+    <div class="container pt-5">
+        <div class="row">
+
+        <h2>Prediction Results</h2>
+
+            <table class="table">
+                <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Age</th>
+                <th scope="col">Sex</th>
+                <th scope="col">Body Mass Index</th>
+                <th scope="col">Children</th>
+                <th scope="col">Smoker</th>
+                <th scope="col">Prediction Price($)</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for data in dataset %}
+                    <tr>
+                    <th scope="row">{{ data.id }}</th>
+                    <td>{{ data.age }}</td>
+                    <td>{{ data.sex }}</td>
+                    <td>{{ data.bmi }}</td>
+                    <td>{{ data.children }}</td>
+                    <td>{{ data.smooker }}</td>
+                    <td>{{ data.regression }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

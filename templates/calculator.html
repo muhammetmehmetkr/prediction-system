@@ -1,0 +1,25 @@
+{% extends 'homepage.html' %}
+{% block main %}
+{% load static %}
+<div class="container text-center">
+    <h1>Your BMI is: </h1>
+
+    <h2 class="alert alert-success">{{ bmi }} kg/m<sup>2</sup></h2>
+
+    <h2 class="alert alert-primary">You are {{ condition }}
+        {% if condition == "Normal" %}<img src="{% static 'Normal.png' %}" width="60" height="60">{% endif %}
+        {% if condition == "Underweight" %}<img src="{% static 'underweight.png' %}" width="60" height="60">{% endif %}
+        {% if condition == "Overweight" %}<img src="{% static 'overweight.png' %}" width="60" height="60">{% endif %}</h2>
+    <div class="alert alert-warning">
+        <h3>Some suggestions for you are:</h3>
+        <h5>{{ s1 }}</h5>
+        <h5>{{ s2 }}</h5>
+        <h5>{{ s3 }}</h5>
+        <h5>{{ s4 }}</h5>
+        <h5>{{ s5 }}</h5>
+    </div>
+    <br>
+    <a href="{% url 'predict:bmi' %}" class="btn btn-danger">Go Back</a>
+</div>
+
+{% endblock %}

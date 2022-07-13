@@ -1,0 +1,19 @@
+{% extends 'homepage.html' %}
+
+{% block main %}
+
+<title>BMI</title>
+<div class="container text-center">
+    <h1 class="alert alert-warning">BMI CALCULATOR</h1>
+    <br>
+    <form action="{% url 'predict:calculator' %}" method='post'>
+        {% csrf_token %}
+        Weight: <input type="text" name="weight" placeholder="kg" required>
+        <br><br>
+        Height: <input type="text" name="height" placeholder="cm" required>
+        <br><br>
+        <input type="submit" value="Calculate" class="btn btn-info">
+    </form>
+</div>
+
+{% endblock %}

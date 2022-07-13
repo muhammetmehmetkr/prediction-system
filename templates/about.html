@@ -1,0 +1,25 @@
+{% extends 'homepage.html' %}
+
+{% block main %}
+
+<div class="container pt-3">
+    <div class="row justify-content-md-center">
+        <div class="col-md-6">
+            <h2>About</h2>
+            <hr>
+            <p>
+                This website was made to calculate the cost of health insurance. "Random forest" is used as machine learning algorithm 
+                and the accuracy rate of this algorithm is 89.74 percent.
+            </p>
+            Age: Please enter integer value (from 18 to 65)<br>
+            Sex: Please enter 0 or 1 (0=female, 1=male)<br>
+            BMI: Please enter value (from 15 to 54)<br>
+            Children: Please enter integer value (from 0 to 6)<br>
+            Smoker: Please enter 0 or 1 (0=no, 1=yes)<br><br>
+            The user must enter values according to the properties in the dataset. Otherwise, there will be a deviation in the accuracy rate.
+
+        </div>
+    </div>   
+</div>
+
+{% endblock %}
