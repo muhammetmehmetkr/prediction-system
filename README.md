@@ -1,6 +1,7 @@
 # prediction-system
 Health Insurance Cost Prediction
 
+Terminal commands:
 
 pip install django
 
