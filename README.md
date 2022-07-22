@@ -3,14 +3,14 @@ Health Insurance Cost Prediction
 
 Terminal commands:
 
-pip install django
+--> pip install django
 
-pip install pandas
+--> pip install pandas
 
-pip install sklearn
+--> pip install sklearn
 
-python manage.py makemigrations
+--> python manage.py makemigrations
 
-python manage.py migrate
+--> python manage.py migrate
 
-python manage.py runserver
+--> python manage.py runserver
