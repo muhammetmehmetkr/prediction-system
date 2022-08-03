@@ -1,5 +1,5 @@
 # prediction-system
-Health Insurance Cost Prediction
+Health Insurance Cost Prediction Web App
 
 Terminal commands:
 
